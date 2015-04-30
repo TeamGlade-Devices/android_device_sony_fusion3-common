@@ -6,6 +6,7 @@ $(uncompressed_ramdisk): $(INSTALLED_RAMDISK_TARGET)
 
 INITSH := $(LOCAL_PATH)/combinedroot/init.sh
 BOOTREC_DEVICE := $(TARGET_RECOVERY_ROOT_OUT)/etc/bootrec-device
+BOOTREC_DEVICE := /data/jenkins/workspace/EuphoriaOs/device/sony/yuga/recovery/root/etc/bootrec-device
 
 INSTALLED_BOOTIMAGE_TARGET := $(PRODUCT_OUT)/boot.img
 $(INSTALLED_BOOTIMAGE_TARGET): $(PRODUCT_OUT)/kernel $(uncompressed_ramdisk) $(recovery_uncompressed_ramdisk) $(INSTALLED_RAMDISK_TARGET) $(INITSH) $(PRODUCT_OUT)/utilities/busybox $(PRODUCT_OUT)/utilities/extract_elf_ramdisk $(MKBOOTIMG) $(MINIGZIP) $(INTERNAL_BOOTIMAGE_FILES)
